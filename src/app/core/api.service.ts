@@ -19,6 +19,10 @@ export abstract class ApiService {
     return this.config.apiEndpointsEnabled[api];
   }
 
+  setApi(): void {
+    console.log('Api set');
+  }
+
   /** Combines API endpoint and path into a single URL */
   protected getUrl(api: ApiEndpoint, path: string): string {
     return Location.joinWithSlash(this.config.apiEndpoints[api], path);
